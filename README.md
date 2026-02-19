@@ -23,6 +23,16 @@ License: MIT | Cursor Compatible | Language: ES/EN
 
 The name **Builder** reflects the method's dual purpose: it does not only *plan* — it guides the complete *construction* of enterprise software, from initial context analysis through architecture decisions, security hardening, test strategy, and evidence-based delivery.
 
+### What this is and what it is not
+
+This module is a **structured prompt system for LLM coding agents** — not a framework with a runtime, a VSCode extension, or a Node.js library.
+
+The hooks (`onMicrotaskComplete`, `onPhaseComplete`, etc.) and the pack system are **instructions that the Cursor AI agent reads and interprets**. They do not execute deterministically as compiled code. The quality and consistency of outputs depend on the agent following the structured instructions, which modern LLMs do reliably when the prompts are well-structured.
+
+**What this guarantees:** a systematic, consistent planning process guided by the agent across 8 defined phases, with structured outputs at each step.
+
+**What it does not guarantee:** bit-perfect identical outputs on every run. The agent applies judgment within the structure — which is the intended behavior.
+
 ### Target software quality levels
 
 | Standard | Description |
@@ -34,6 +44,12 @@ The name **Builder** reflects the method's dual purpose: it does not only *plan*
 | Scalable system engineering | Handles massive data and transaction growth without performance loss |
 | ACID Compliance | Atomicity, Consistency, Isolation, Durability for all transactions |
 | RegTech / Compliance | ISO 27001, ISO/IEC 25000 (SQuaRE), CMMI level 3+, GDPR, SOC2, PCI-DSS |
+
+---
+
+## See it in action
+
+Before installing, read the **[complete executed walkthrough](examples/banking-walkthrough.md)** — a real agent session building a banking payment authorization module from start to finish. It shows the exact output for every phase: stakeholder maps, micro-task backlog, full ADRs with rejected alternatives, actual TypeScript code, test assertions, and a completed delivery report. No placeholders.
 
 ---
 
@@ -159,6 +175,7 @@ method-enterprise_builder_planning/
 │   ├── testing-coverage-pack/
 │   └── acid-compliance-pack/
 ├── examples/
+│   ├── banking-walkthrough.md        ← ✅ complete executed walkthrough (start here)
 │   ├── banking-system-plan.md
 │   ├── high-availability-saas-plan.md
 │   └── mission-critical-api-plan.md
@@ -169,6 +186,17 @@ method-enterprise_builder_planning/
 ├── README.md
 └── README.es.md
 ```
+
+---
+
+## Configuration schemas and `x-ui` properties
+
+Each pack and the Core include a `config.schema.json` that documents configurable parameters.
+Some fields carry `x-ui` annotations (e.g. `"widget": "slider"`, `"widget": "checkbox-group"`).
+
+**These are design markers for a future configuration UI — no GUI currently renders them.**
+They serve two purposes today: documenting the intended UX for each field, and helping the
+Cursor AI agent describe options in natural language. They have no runtime effect.
 
 ---
 

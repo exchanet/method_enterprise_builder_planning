@@ -30,6 +30,15 @@ Reference guide for enterprise test strategy, coverage requirements, test templa
 | Performance | All p95/p99 SLOs validated | Load test reports | YES — hard block |
 | Chaos | Minimum chaos experiment set | Chaos runbook | WARN — soft block |
 
+> **Coverage is a quality floor, not a quality ceiling.**
+> ≥99% line/branch coverage is the minimum threshold — not the definition of quality.
+> A test suite that reaches 99% with trivial assertions (e.g. `expect(true).toBe(true)`,
+> or asserting only return types without verifying values) is worse than one at 90%
+> with assertions that verify meaningful business behavior.
+> Coverage measures *what code was executed during tests*, not *whether tests verify
+> correct behavior*. Always review assertion quality alongside coverage numbers.
+> The question to ask per test: **"If this code had a bug, would this assertion catch it?"**
+
 ---
 
 ## Unit Test Standards

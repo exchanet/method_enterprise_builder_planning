@@ -23,6 +23,16 @@ Licencia: MIT | Compatible con Cursor | Idioma: ES/EN
 
 El nombre **Builder** refleja el propósito dual del método: no solo *planifica*, sino que guía la *construcción completa* del software enterprise, desde el análisis de contexto inicial hasta las decisiones de arquitectura, el endurecimiento de seguridad, la estrategia de tests y la entrega con evidencia.
 
+### Qué es y qué no es
+
+Este módulo es un **sistema de prompts estructurados para agentes LLM de codificación** — no es un framework con runtime propio, una extensión de VSCode ni una librería Node.js.
+
+Los hooks (`onMicrotaskComplete`, `onPhaseComplete`, etc.) y el sistema de packs son **instrucciones que el agente Cursor AI lee e interpreta**. No se ejecutan de forma determinista como código compilado. La calidad y consistencia de los outputs depende de que el agente siga las instrucciones estructuradas, lo cual los LLMs modernos hacen de forma fiable cuando los prompts están bien diseñados.
+
+**Qué garantiza este método:** un proceso de planificación sistemático y consistente guiado por el agente a través de 8 fases definidas, con outputs estructurados en cada paso.
+
+**Qué no garantiza:** outputs idénticos bit a bit en cada ejecución. El agente aplica criterio dentro de la estructura — lo cual es el comportamiento intencionado.
+
 ### Niveles de calidad de software objetivo
 
 | Estándar | Descripción |
@@ -34,6 +44,12 @@ El nombre **Builder** refleja el propósito dual del método: no solo *planifica
 | Ingeniería de sistemas escalables | Capacidad para manejar crecimiento masivo de datos y transacciones |
 | Cumplimiento ACID | Atomicidad, Consistencia, Aislamiento, Durabilidad en todas las transacciones |
 | RegTech / Compliance | ISO 27001, ISO/IEC 25000 (SQuaRE), CMMI nivel 3+, RGPD, SOC2, PCI-DSS |
+
+---
+
+## Véelo en acción
+
+Antes de instalarlo, lee el **[walkthrough completo y ejecutado](examples/banking-walkthrough.md)** — una sesión de agente real construyendo un módulo de autorización de pagos bancarios de principio a fin. Muestra el output exacto para cada fase: mapas de stakeholders, backlog de micro-tareas, ADRs completos con alternativas rechazadas, código TypeScript real, assertions de tests y un delivery report completado. Sin placeholders.
 
 ---
 
@@ -159,6 +175,7 @@ method-enterprise_builder_planning/
 │   ├── testing-coverage-pack/
 │   └── acid-compliance-pack/
 ├── examples/
+│   ├── banking-walkthrough.md        ← ✅ walkthrough ejecutado completo (empieza aquí)
 │   ├── banking-system-plan.md
 │   ├── high-availability-saas-plan.md
 │   └── mission-critical-api-plan.md
@@ -169,6 +186,15 @@ method-enterprise_builder_planning/
 ├── README.md
 └── README.es.md
 ```
+
+---
+
+## Schemas de configuración y propiedades `x-ui`
+
+Cada pack y el Core incluyen un `config.schema.json` que documenta los parámetros configurables.
+Algunos campos llevan anotaciones `x-ui` (por ejemplo `"widget": "slider"`, `"widget": "checkbox-group"`).
+
+**Estos son marcadores de diseño para una futura interfaz de configuración — actualmente no existe ninguna GUI que los renderice.** Sirven para dos propósitos hoy: documentar la UX prevista para cada campo y ayudar al agente Cursor AI a describir las opciones en lenguaje natural. No tienen ningún efecto en tiempo de ejecución.
 
 ---
 

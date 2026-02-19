@@ -1,4 +1,4 @@
-﻿# Sub-skill: Testing Strategy
+# Sub-skill: Testing Strategy
 
 ## Purpose
 
@@ -33,6 +33,8 @@ Load: [k6 | Artillery | Locust]
 Security: [OWASP ZAP | Semgrep | Snyk]
 Coverage: [c8/Istanbul (TS) | coverage.py (Python)]
 ```
+
+> **Coverage floor vs quality ceiling:** ≥99% line/branch coverage is required as a minimum, but coverage alone does not equal test quality. Always verify that assertions check meaningful behavior — if introducing a bug in the covered code would not cause a test to fail, the test is not providing value regardless of coverage numbers.
 
 ### Step 2: Write unit test specification
 

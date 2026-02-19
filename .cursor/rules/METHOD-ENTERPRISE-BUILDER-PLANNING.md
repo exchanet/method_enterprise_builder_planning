@@ -20,6 +20,8 @@ integrates_with:
 
 A systematic 8-phase planning methodology for designing and building enterprise-grade, mission-critical, and high-availability software systems. Every output follows the Core + Packs modular pattern (Method Modular Design) and is validated through the PDCA-T quality cycle (≥99% test coverage).
 
+> **System nature:** This is a structured prompt system for LLM agents. Hooks and pack behaviors are interpreted by the Cursor AI agent, not executed by a runtime. Outputs are consistent and structured, but not deterministic at the character level.
+
 ## When to Activate
 
 Activate this method when any of the following apply:

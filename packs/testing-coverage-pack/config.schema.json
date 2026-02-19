@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Testing Coverage Pack Configuration",
+  "$comment": "NOTE — x-ui properties are design markers for a future configuration UI. No GUI currently renders them. Ignore for runtime/validation purposes.",
   "type": "object",
   "properties": {
     "unit_coverage_minimum": {

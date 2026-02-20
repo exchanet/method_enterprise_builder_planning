@@ -15,7 +15,7 @@ The fastest way to get started. No terminal, no git, no configuration required.
 
 **Step 1 — Download**
 
-Go to the [GitHub repository](https://github.com/exchanet/method_enterprise_builder_planning_cursor) and click **Code → Download ZIP**. Unzip the downloaded file.
+Go to the [GitHub repository](https://github.com/exchanet/method_enterprise_builder_planning) and click **Code → Download ZIP**. Unzip the downloaded file.
 
 **Step 2 — Copy the path**
 
@@ -61,8 +61,8 @@ Cursor will acknowledge activation and ask you to describe your system. The 8-ph
 ### Clone and copy to your project
 
 ```bash
-git clone https://github.com/exchanet/method_enterprise_builder_planning_cursor.git
-cd method_enterprise_builder_planning_cursor
+git clone https://github.com/exchanet/method_enterprise_builder_planning.git
+cd method_enterprise_builder_planning
 
 # Copy rules and skills to your project
 cp -r .cursor /path/to/your/project/

@@ -2,7 +2,7 @@
 
 All notable changes to Method Enterprise Builder Planning will be documented in this file.
 
-Repository: [method_enterprise_builder_planning_cursor](https://github.com/exchanet/method_enterprise_builder_planning_cursor)  
+Repository: [method_enterprise_builder_planning](https://github.com/exchanet/method_enterprise_builder_planning)  
 Author: Francisco J Bernades — [@exchanet](https://github.com/exchanet)
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),

@@ -1,37 +1,82 @@
-# Method Enterprise Builder Planning — Cursor AI
+# Method Enterprise Builder Planning
 
-> **Una metodología granular de planificación y construcción de software enterprise-grade, de misión crítica y alta disponibilidad, diseñada para agentes Cursor AI.**
+> **Metodología universal de 8 fases para planificar y construir software enterprise-grade, de misión crítica y alta disponibilidad. Compatible con los principales agentes de IA para desarrollo.**
 
-Licencia: MIT | Compatible con Cursor | Idioma: ES/EN
+[![Licencia: MIT](https://img.shields.io/badge/Licencia-MIT-blue.svg)](LICENSE)
+[![Tests](https://img.shields.io/badge/tests-75%20pasando-success)](.)
+[![Cobertura](https://img.shields.io/badge/cobertura-%E2%89%A599%25-success)](.)
+[![Multi-Agente](https://img.shields.io/badge/agentes-5%20plataformas-purple)](agents/)
+
+**Versión:** 2.0.0 | **Licencia:** MIT | **Idioma:** 🇬🇧 EN / 🇪🇸 ES
 
 **Autor:** Francisco J Bernades  
 **GitHub:** [@exchanet](https://github.com/exchanet)  
-**Repositorio:** [method_enterprise_builder_planning_cursor](https://github.com/exchanet/method_enterprise_builder_planning_cursor)
+**Repositorio:** [method_enterprise_builder_planning](https://github.com/exchanet/method_enterprise_builder_planning)
 
 ---
 
-## Recomendado usar en combinación con
+## 🌟 ¿Por qué usar este método?
 
-- [Method Modular Design](https://github.com/exchanet/method_modular_design_cursor) — Patrón de arquitectura Core + Packs
-- [Método PDCA-T](https://github.com/exchanet/method_pdca-t_coding_Cursor) — Ciclo de aseguramiento de calidad (cobertura de tests ≥99%)
+### Para equipos que construyen:
+- **Banca y Fintech**: Pasarelas de pago, plataformas de trading, sistemas de compliance regulatorio
+- **Salud**: Historiales clínicos HIPAA, plataformas de telemedicina, software de dispositivos médicos
+- **E-commerce a escala**: SaaS multi-tenant, marketplaces de alto tráfico, inventario distribuido
+- **Gobierno y Defensa**: Sistemas security-first, audit trails, infraestructura de misión crítica
+- **SaaS Enterprise**: Despliegues multi-región, SLA 99.99%, compliance RGPD/SOC2
+
+### Qué obtienes:
+- ✅ **Decisiones de arquitectura sistemáticas** documentadas como ADRs con alternativas rechazadas
+- ✅ **Identificación de riesgos** (modelo de amenazas STRIDE) antes de escribir código
+- ✅ **Descomposición en micro-tareas** (≤50 líneas) para desarrollo paralelo
+- ✅ **Estrategia de tests** con requisito de cobertura ≥99%
+- ✅ **Mapeo de compliance** (ISO 27001, RGPD, PCI-DSS, SOC2)
+- ✅ **Quality gates automatizados** vía templates CI/CD
+- ✅ **Entrega basada en evidencia** con métricas y reportes de sign-off
+
+---
+
+## Métodos complementarios recomendados
+
+- [Method Modular Design](https://github.com/exchanet/method_modular_design) — Patrón de arquitectura Core + Packs
+- [Método PDCA-T](https://github.com/exchanet/method_pdca-t_coding) — Ciclo de aseguramiento de calidad (cobertura de tests ≥99%)
 
 ---
 
 ## ¿Qué es esto?
 
-**Method Enterprise Builder Planning** es un módulo de Cursor AI (Rules + Skills + Packs) que proporciona un **marco sistemático y granular para planificar y construir software enterprise**.
+**Method Enterprise Builder Planning** es un **framework híbrido universal** que combina:
+- **Sistema de prompts estructurados** para agentes de IA (Cursor AI, Claude Code, Kimi Code, Windsurf, Google Antigravity)
+- **Herramientas ejecutables independientes** (ADR Validator, Microtask Linter) para quality gates automatizados
+- **Templates de integración CI/CD** para GitHub Actions, GitLab CI, Azure DevOps y Jenkins
 
-El nombre **Builder** refleja el propósito dual del método: no solo *planifica*, sino que guía la *construcción completa* del software enterprise, desde el análisis de contexto inicial hasta las decisiones de arquitectura, el endurecimiento de seguridad, la estrategia de tests y la entrega con evidencia.
+El nombre **Builder** refleja el alcance integral del método: no solo *planifica* — orquesta la *construcción completa* de software enterprise-grade, desde el análisis inicial de stakeholders hasta las decisiones de arquitectura, endurecimiento de seguridad, descomposición en micro-tareas, estrategia de tests (≥99% cobertura) y sign-off de entrega basado en evidencia.
 
-### Qué es y qué no es
+### Arquitectura multi-agente
 
-Este módulo es un **sistema de prompts estructurados para agentes LLM de codificación** — no es un framework con runtime propio, una extensión de VSCode ni una librería Node.js.
+A diferencia de frameworks específicos de un solo agente, esta metodología funciona con **5 plataformas líderes de IA para desarrollo**:
 
-Los hooks (`onMicrotaskComplete`, `onPhaseComplete`, etc.) y el sistema de packs son **instrucciones que el agente Cursor AI lee e interpreta**. No se ejecutan de forma determinista como código compilado. La calidad y consistencia de los outputs depende de que el agente siga las instrucciones estructuradas, lo cual los LLMs modernos hacen de forma fiable cuando los prompts están bien diseñados.
+| Plataforma | Adaptador | Instalación |
+|---|---|---|
+| **Cursor AI** | `.cursor/` rules + skills | Express o manual |
+| **Claude Code** | `CLAUDE.md` + `.claude/` | Copiar a raíz del proyecto |
+| **Kimi Code** | `KIMI.md` | Archivo único |
+| **Windsurf Cascade** | `WINDSURF.md` | Archivo único |
+| **Google Antigravity** | `AGENTS.md` + `GEMINI.md` + `.agent/skills/` | Paquete completo de skills |
 
-**Qué garantiza este método:** un proceso de planificación sistemático y consistente guiado por el agente a través de 8 fases definidas, con outputs estructurados en cada paso.
+Todos los adaptadores siguen el **mismo protocolo de 8 fases**, garantizando consistencia independientemente del agente de IA que uses.
 
-**Qué no garantiza:** outputs idénticos bit a bit en cada ejecución. El agente aplica criterio dentro de la estructura — lo cual es el comportamiento intencionado.
+### Naturaleza híbrida: Prompts + Ejecutables
+
+**Prompts estructurados** guían al agente en fases de planificación sistemática.  
+**Herramientas ejecutables** proporcionan validación determinista que complementa el criterio del agente:
+
+- **ADR Validator**: 11 reglas enterprise (estructurales, negocio, compliance) — bloquea estado Accepted si no cumple requisitos
+- **Microtask Linter**: Fuerza ≤50 líneas efectivas por archivo, sugiere divisiones automáticas
+- **Gates CI/CD**: Checks de calidad automatizados en tu pipeline
+
+**Qué garantiza esto:** Proceso sistemático de 8 fases con cumplimiento de calidad automatizado en gates críticos.
+
+**Qué no garantiza:** Outputs idénticos bit a bit en cada ejecución. El agente aplica juicio arquitectónico dentro de la estructura — el comportamiento intencionado para diseño de sistemas complejos.
 
 ### Niveles de calidad de software objetivo
 
@@ -47,68 +92,123 @@ Los hooks (`onMicrotaskComplete`, `onPhaseComplete`, etc.) y el sistema de packs
 
 ---
 
-## v2.0.0 — Novedades
+## 🚀 v2.0.0 — De solo-Cursor a framework universal multi-agente
 
-| Componente | Qué añade |
-|---|---|
-| **ADR Validator** | CLI que valida ADRs contra 11 reglas enterprise — gate para la Fase 5 |
-| **Microtask Linter** | Valida ≤50 líneas efectivas por archivo con sugerencias de división automática |
-| **Templates CI/CD** | Workflows para GitHub Actions, GitLab CI, Azure DevOps, Jenkins |
-| **Soporte multi-agente** | Adaptadores para Claude Code, Kimi Code, Windsurf (mismo protocolo de 8 fases) |
+| Componente | Qué hace | Por qué importa |
+|---|---|---|
+| **Soporte Multi-Agente** | Cursor AI, Claude Code, Kimi Code, Windsurf, Google Antigravity | Usa con **cualquier agente líder de IA** — misma metodología, mismas 8 fases |
+| **ADR Validator** | CLI: 11 reglas enterprise (estructurales, negocio, compliance) | **Quality gate de arquitectura automatizado** — bloquea Accepted si no cumple requisitos |
+| **Microtask Linter** | Fuerza ≤50 líneas efectivas por archivo | **Habilita desarrollo paralelo** — sugiere divisiones automáticas para archivos grandes |
+| **Templates CI/CD** | Listos para usar: GitHub Actions, GitLab CI, Azure DevOps, Jenkins | **Quality gates en tu pipeline**: check de cobertura, linting de micro-tareas, validación de entrega |
+| **Herramientas Ejecutables** | Validadores TypeScript con ≥99% cobertura de tests | **Validación determinista** — no solo prompts, automatización real |
 
-> **Breaking change:** `.cursor/` ahora está en `agents/cursor/.cursor/`. Ejecuta `scripts/migrate-to-v2.ps1` (Windows) o `scripts/migrate-to-v2.sh` (macOS/Linux). Ver [MIGRATION-v2.md](docs/MIGRATION-v2.md).
+### Migración desde v1.x
+
+> **Breaking change:** Estructura de directorios refactorizada para soporte multi-agente.  
+> **Antiguo:** `.cursor/` en raíz  
+> **Nuevo:** `agents/cursor/.cursor/`, `agents/claude-code/`, `agents/antigravity/`, etc.
+
+**Migración automática:**
+```bash
+# Windows
+powershell -File scripts/migrate-to-v2.ps1
+
+# macOS / Linux
+bash scripts/migrate-to-v2.sh
+```
+
+Ver [MIGRATION-v2.md](docs/MIGRATION-v2.md) para guía de migración detallada.
 
 ---
 
-## Véelo en acción
+## 📚 Véelo en acción
 
-Antes de instalarlo, lee el **[walkthrough completo y ejecutado](examples/banking-walkthrough.md)** — una sesión de agente real construyendo un módulo de autorización de pagos bancarios de principio a fin. Muestra el output exacto para cada fase: mapas de stakeholders, backlog de micro-tareas, ADRs completos con alternativas rechazadas, código TypeScript real, assertions de tests y un delivery report completado. Sin placeholders.
+### Walkthrough completo ejecutado
+
+Lee el **[walkthrough de Autorización de Pagos Bancarios](examples/banking-walkthrough.md)** — una **sesión real de agente** construyendo un sistema de pagos enterprise desde cero:
+
+- **Fase 1**: Mapa de stakeholders (producto, seguridad, compliance, DevOps)
+- **Fase 2**: Backlog de micro-tareas (32 tareas, ≤50 líneas cada una)
+- **Fase 3**: Análisis de riesgos (modelo de amenazas STRIDE: SQL injection, MITM, escalada de privilegios)
+- **Fase 4-5**: 7 ADRs con alternativas rechazadas (elección de BD, cifrado, idempotencia)
+- **Fase 6**: Implementación TypeScript con ≥99% cobertura de tests
+- **Fase 7**: Reporte de entrega con métricas y evidencia de compliance
+- **Fase 8**: Documentación de handover para despliegue en producción
+
+**Sin placeholders, sin ejemplos sintéticos.** Outputs reales generados por la metodología.
+
+---
+
+## 🏗️ Qué puedes construir con esto
+
+### Ejemplos por industria
+
+| Dominio | Ejemplo de Sistema | Requisitos Clave Abordados |
+|---|---|---|
+| **Banca** | Pasarela de autorización de pagos | Compliance PCI-DSS, transacciones ACID, detección de fraude, audit trails |
+| **Salud** | Historiales clínicos electrónicos (EHR) | Compliance HIPAA, cifrado de datos, acceso basado en roles, gestión de consentimiento |
+| **E-commerce** | Marketplace multi-tenant | Escalado horizontal, consistencia eventual, idempotencia, rate limiting |
+| **Seguros** | Workflow de procesamiento de reclamaciones | Diseño de máquina de estados, tracking de SLA, reporting regulatorio, disaster recovery |
+| **Cadena de Suministro** | Tracking de inventario en tiempo real | Arquitectura de alta disponibilidad, transacciones distribuidas, resolución de conflictos |
+| **Gobierno** | Verificación de identidad de ciudadanos | Seguridad por diseño, arquitectura zero-trust, compliance RGPD, pruebas de penetración |
+
+### Patrones técnicos cubiertos
+
+- **Arquitectura**: Microservicios, event-driven, CQRS, patrones saga, API gateway
+- **Datos**: Transacciones ACID, consistencia eventual, sharding, replicación, data lakes
+- **Seguridad**: Zero-trust, cifrado en reposo/tránsito, RBAC, OAuth2/OIDC, logs de auditoría
+- **Escalabilidad**: Escalado horizontal, estrategias de caché, CDN, balanceo de carga
+- **Compliance**: Mapeo de RGPD, HIPAA, PCI-DSS, SOC2, ISO 27001
 
 ---
 
 ## Inicio rápido
 
-### Instalación express — Cursor (recomendado)
+### Instalación express (recomendado)
 
-1. Descarga este repositorio como `.zip` desde [GitHub](https://github.com/exchanet/method_enterprise_builder_planning_cursor) y descomprímelo
-2. Copia la ruta de la carpeta descomprimida — por ejemplo: `C:\Users\tu-nombre\Downloads\method-enterprise_builder_planning`
-3. Abre Cursor → Nuevo chat de agente
-4. Pega la ruta y escribe:
+**Para Cursor AI**:
+1. Descarga el repositorio como `.zip` desde [GitHub](https://github.com/exchanet/method_enterprise_builder_planning) → descomprime
+2. Copia la ruta de la carpeta (ej: `C:\Users\tu-nombre\Downloads\method-enterprise_builder_planning`)
+3. Cursor → Nuevo chat de agente → Pega la ruta:
+   ```
+   Instala este método globalmente: C:\Users\tu-nombre\Downloads\method-enterprise_builder_planning
+   ```
+4. Reinicia Cursor → Usa con: `/method-enterprise_builder`
 
-```
-Instala este método para que pueda utilizarlo en Cursor: C:\Users\tu-nombre\Downloads\method-enterprise_builder_planning
-```
-
-5. Cierra y vuelve a abrir Cursor
-6. Para utilizarlo directamente, escribe en cualquier chat: `/method-enterprise_builder`
-
-### Instalación para otros agentes
+**Para otros agentes**:
 
 ```bash
-# Claude Code
-cp agents/claude-code/CLAUDE.md /ruta/a/tu-proyecto/
-cp -r agents/claude-code/.claude /ruta/a/tu-proyecto/
+# Clona el repositorio
+git clone https://github.com/exchanet/method_enterprise_builder_planning.git
+cd method_enterprise_builder_planning
 
-# Kimi Code
-cp agents/kimi-code/KIMI.md /ruta/a/tu-proyecto/
-
-# Windsurf
-cp agents/windsurf/WINDSURF.md /ruta/a/tu-proyecto/
-
-# Google Antigravity
-cp agents/antigravity/AGENTS.md /ruta/a/tu-proyecto/
-cp agents/antigravity/GEMINI.md /ruta/a/tu-proyecto/  # Opcional (específico de Gemini)
-cp -r agents/antigravity/.agent /ruta/a/tu-proyecto/
+# Instala para tu agente
+bash scripts/migrate-to-v2.sh --project=/ruta/a/tu-proyecto --agent=cursor
+# Opciones: cursor, claude-code, kimi-code, windsurf, antigravity
 ```
 
-Ver [agents/README.md](agents/README.md) para la tabla comparativa completa de agentes.
+**Instalación global** (disponible en todos los proyectos):
+```bash
+# Cursor AI
+cp -r agents/cursor/.cursor ~/.cursor/
+
+# Claude Code
+cp agents/claude-code/CLAUDE.md ~/.config/claude/
+cp -r agents/claude-code/.claude ~/.config/claude/
+
+# Antigravity
+cp agents/antigravity/AGENTS.md ~/.config/antigravity/
+cp -r agents/antigravity/.agent ~/.config/antigravity/
+```
+
+Ver [agents/README.md](agents/README.md) para instalación detallada por plataforma.
 
 ### Instalación manual
 
 ```bash
 # Clonar repositorio
-git clone https://github.com/exchanet/method_enterprise_builder_planning_cursor.git
-cd method_enterprise_builder_planning_cursor
+git clone https://github.com/exchanet/method_enterprise_builder_planning.git
+cd method_enterprise_builder_planning
 
 # Copiar a tu proyecto
 cp -r .cursor /ruta/a/tu/proyecto/

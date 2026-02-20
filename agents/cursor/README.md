@@ -6,7 +6,7 @@ This directory contains the Cursor-specific implementation of Method Enterprise 
 
 ### Express (recommended)
 
-1. Download the repository as `.zip` from [GitHub](https://github.com/exchanet/method_enterprise_builder_planning_cursor) and unzip it
+1. Download the repository as `.zip` from [GitHub](https://github.com/exchanet/method_enterprise_builder_planning) and unzip it
 2. Open Cursor → New Agent chat
 3. Paste the path to the unzipped folder and type:
 

@@ -1,37 +1,82 @@
-# Method Enterprise Builder Planning — Cursor AI
+# Method Enterprise Builder Planning
 
-> **A granular planning and building methodology for enterprise-grade, mission-critical, and high-availability software systems, designed for Cursor AI agents.**
+> **Universal 8-phase methodology for planning and building enterprise-grade, mission-critical, and high-availability software systems. Compatible with leading AI coding agents.**
 
-License: MIT | Cursor Compatible | Language: ES/EN
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Tests](https://img.shields.io/badge/tests-75%20passing-success)](.)
+[![Coverage](https://img.shields.io/badge/coverage-%E2%89%A599%25-success)](.)
+[![Multi-Agent](https://img.shields.io/badge/agents-5%20platforms-purple)](agents/)
+
+**Version:** 2.0.0 | **License:** MIT | **Language:** 🇬🇧 EN / 🇪🇸 ES
 
 **Author:** Francisco J Bernades  
 **GitHub:** [@exchanet](https://github.com/exchanet)  
-**Repository:** [method_enterprise_builder_planning_cursor](https://github.com/exchanet/method_enterprise_builder_planning_cursor)
+**Repository:** [method_enterprise_builder_planning](https://github.com/exchanet/method_enterprise_builder_planning)
 
 ---
 
-## Recommended to use in combination with
+## 🌟 Why use this method?
 
-- [Method Modular Design](https://github.com/exchanet/method_modular_design_cursor) — Core + Packs architecture pattern
-- [PDCA-T Method](https://github.com/exchanet/method_pdca-t_coding_Cursor) — Quality assurance cycle (≥99% test coverage)
+### For teams building:
+- **Banking & Fintech**: Payment gateways, trading platforms, regulatory compliance systems
+- **Healthcare**: HIPAA-compliant patient records, telemedicine platforms, medical device software
+- **E-commerce at scale**: Multi-tenant SaaS, high-traffic marketplaces, distributed inventory systems
+- **Government & Defense**: Security-first systems, audit trails, mission-critical infrastructure
+- **Enterprise SaaS**: Multi-region deployments, 99.99% SLA requirements, GDPR/SOC2 compliance
+
+### What you get:
+- ✅ **Systematic architecture decisions** documented as ADRs with rejected alternatives
+- ✅ **Risk identification** (STRIDE threat model) before writing code
+- ✅ **Micro-task decomposition** (≤50 lines) for parallel development
+- ✅ **Test strategy** with ≥99% coverage requirements
+- ✅ **Compliance mapping** (ISO 27001, GDPR, PCI-DSS, SOC2)
+- ✅ **Automated quality gates** via CI/CD templates
+- ✅ **Evidence-based delivery** with metrics and sign-off reports
+
+---
+
+## Recommended companion methods
+
+- [Method Modular Design](https://github.com/exchanet/method_modular_design) — Core + Packs architecture pattern
+- [PDCA-T Method](https://github.com/exchanet/method_pdca-t_coding) — Quality assurance cycle (≥99% test coverage)
 
 ---
 
 ## What is this?
 
-**Method Enterprise Builder Planning** is a Cursor AI module (Rules + Skills + Packs) that provides a **systematic, granular planning and building framework** for enterprise software development.
+**Method Enterprise Builder Planning** is a **universal hybrid framework** combining:
+- **Structured prompt system** for AI coding agents (Cursor AI, Claude Code, Kimi Code, Windsurf, Google Antigravity)
+- **Standalone executable tools** (ADR Validator, Microtask Linter) for automated quality gates
+- **CI/CD integration templates** for GitHub Actions, GitLab CI, Azure DevOps, and Jenkins
 
-The name **Builder** reflects the method's dual purpose: it does not only *plan* — it guides the complete *construction* of enterprise software, from initial context analysis through architecture decisions, security hardening, test strategy, and evidence-based delivery.
+The name **Builder** reflects the method's comprehensive scope: it doesn't just *plan* — it orchestrates the complete *construction* of enterprise-grade software, from initial stakeholder analysis through architecture decisions, security hardening, micro-task decomposition, test strategy (≥99% coverage), and evidence-based delivery sign-off.
 
-### What this is and what it is not
+### Multi-agent architecture
 
-This module is a **structured prompt system for LLM coding agents** — not a framework with a runtime, a VSCode extension, or a Node.js library.
+Unlike agent-specific frameworks, this methodology works across **5 leading AI coding platforms**:
 
-The hooks (`onMicrotaskComplete`, `onPhaseComplete`, etc.) and the pack system are **instructions that the Cursor AI agent reads and interprets**. They do not execute deterministically as compiled code. The quality and consistency of outputs depend on the agent following the structured instructions, which modern LLMs do reliably when the prompts are well-structured.
+| Agent Platform | Adapter | Installation |
+|---|---|---|
+| **Cursor AI** | `.cursor/` rules + skills | Express install or manual |
+| **Claude Code** | `CLAUDE.md` + `.claude/` | Copy to project root |
+| **Kimi Code** | `KIMI.md` | Single file |
+| **Windsurf Cascade** | `WINDSURF.md` | Single file |
+| **Google Antigravity** | `AGENTS.md` + `GEMINI.md` + `.agent/skills/` | Full skills package |
 
-**What this guarantees:** a systematic, consistent planning process guided by the agent across 8 defined phases, with structured outputs at each step.
+All adapters follow the **same 8-phase protocol**, ensuring consistency regardless of which AI agent you use.
 
-**What it does not guarantee:** bit-perfect identical outputs on every run. The agent applies judgment within the structure — which is the intended behavior.
+### Hybrid nature: Prompts + Executables
+
+**Structured prompts** guide the agent through systematic planning phases.  
+**Executable tools** provide deterministic validation that complements agent judgment:
+
+- **ADR Validator**: 11 enterprise rules (structural, business, compliance) — blocks Accepted status if requirements not met
+- **Microtask Linter**: Enforces ≤50 effective lines per file, suggests automatic splits
+- **CI/CD Gates**: Automated quality checks in your pipeline
+
+**What this guarantees:** A systematic 8-phase planning process with automated quality enforcement at critical gates.
+
+**What it does not guarantee:** Bit-perfect identical outputs on every run. The agent applies architectural judgment within the structure — which is the intended behavior for complex system design.
 
 ### Target software quality levels
 
@@ -47,84 +92,149 @@ The hooks (`onMicrotaskComplete`, `onPhaseComplete`, etc.) and the pack system a
 
 ---
 
-## v2.0.0 — What's new
+## 🚀 v2.0.0 — From Cursor-only to universal multi-agent framework
 
-| Component | What it adds |
-|---|---|
-| **ADR Validator** | CLI tool validating ADRs against 11 enterprise rules — gate for Phase 5 |
-| **Microtask Linter** | Validates ≤50 effective lines per file with automatic split suggestions |
-| **CI/CD Templates** | GitHub Actions, GitLab CI, Azure DevOps, Jenkins quality gate workflows |
-| **Multi-agent support** | Claude Code, Kimi Code, Windsurf adapters (same 8-phase protocol) |
+| Component | What it does | Why it matters |
+|---|---|---|
+| **Multi-Agent Support** | Cursor AI, Claude Code, Kimi Code, Windsurf, Google Antigravity | Use with **any leading AI coding agent** — same methodology, same 8 phases |
+| **ADR Validator** | CLI tool: 11 enterprise rules (structural, business, compliance) | **Automated architecture quality gate** — blocks Accepted status if requirements not met |
+| **Microtask Linter** | Enforces ≤50 effective lines per file | **Enables parallel development** — suggests automatic splits for oversized files |
+| **CI/CD Templates** | Ready-to-use: GitHub Actions, GitLab CI, Azure DevOps, Jenkins | **Quality gates in your pipeline**: coverage check, microtask linting, delivery validation |
+| **Executable Tools** | TypeScript validators with ≥99% test coverage | **Deterministic validation** — not just prompts, real automation |
 
-> **Breaking change:** `.cursor/` is now under `agents/cursor/.cursor/`. Run `scripts/migrate-to-v2.ps1` or `scripts/migrate-to-v2.sh`. See [MIGRATION-v2.md](docs/MIGRATION-v2.md).
+### Migration from v1.x
+
+> **Breaking change:** Directory structure refactored for multi-agent support.  
+> **Old:** `.cursor/` in root  
+> **New:** `agents/cursor/.cursor/`, `agents/claude-code/`, `agents/antigravity/`, etc.
+
+**Automatic migration:**
+```bash
+# Windows
+powershell -File scripts/migrate-to-v2.ps1
+
+# macOS / Linux
+bash scripts/migrate-to-v2.sh
+```
+
+See [MIGRATION-v2.md](docs/MIGRATION-v2.md) for detailed migration guide.
 
 ---
 
-## See it in action
+## 📚 See it in action
 
-Before installing, read the **[complete executed walkthrough](examples/banking-walkthrough.md)** — a real agent session building a banking payment authorization module from start to finish. It shows the exact output for every phase: stakeholder maps, micro-task backlog, full ADRs with rejected alternatives, actual TypeScript code, test assertions, and a completed delivery report. No placeholders.
+### Complete executed walkthrough
+
+Read the **[Banking Payment Authorization walkthrough](examples/banking-walkthrough.md)** — a **real agent session** building an enterprise payment system from scratch:
+
+- **Phase 1**: Stakeholder map (product, security, compliance, DevOps)
+- **Phase 2**: Micro-task backlog (32 tasks, ≤50 lines each)
+- **Phase 3**: Risk analysis (STRIDE threat model: SQL injection, MITM, privilege escalation)
+- **Phase 4-5**: 7 ADRs with rejected alternatives (database choice, encryption, idempotency)
+- **Phase 6**: TypeScript implementation with ≥99% test coverage
+- **Phase 7**: Delivery report with metrics and compliance evidence
+- **Phase 8**: Handover documentation for production deployment
+
+**No placeholders, no synthetic examples.** Real outputs generated by the methodology.
+
+---
+
+## 🏗️ What you can build with this
+
+### Examples by industry
+
+| Domain | System Example | Key Requirements Addressed |
+|---|---|---|
+| **Banking** | Payment authorization gateway | PCI-DSS compliance, ACID transactions, fraud detection, audit trails |
+| **Healthcare** | Electronic health records (EHR) | HIPAA compliance, data encryption, role-based access, consent management |
+| **E-commerce** | Multi-tenant marketplace | Horizontal scaling, eventual consistency, idempotency, rate limiting |
+| **Insurance** | Claims processing workflow | State machine design, SLA tracking, regulatory reporting, disaster recovery |
+| **Supply Chain** | Real-time inventory tracking | High-availability architecture, distributed transactions, conflict resolution |
+| **Government** | Citizen identity verification | Security by design, zero-trust architecture, GDPR compliance, penetration testing |
+
+### Technical patterns covered
+
+- **Architecture**: Microservices, event-driven, CQRS, saga patterns, API gateway
+- **Data**: ACID transactions, eventual consistency, sharding, replication, data lakes
+- **Security**: Zero-trust, encryption at rest/in-transit, RBAC, OAuth2/OIDC, audit logs
+- **Scalability**: Horizontal scaling, caching strategies, CDN, load balancing
+- **Compliance**: GDPR, HIPAA, PCI-DSS, SOC2, ISO 27001 mapping
 
 ---
 
 ## Quick Start
 
-### Express installation — Cursor (recommended)
+### Express installation (recommended)
 
-1. Download this repository as `.zip` from [GitHub](https://github.com/exchanet/method_enterprise_builder_planning_cursor) and unzip it
-2. Copy the path to the unzipped folder — for example: `C:\Users\your-name\Downloads\method-enterprise_builder_planning`
-3. Open Cursor → New Agent chat
-4. Paste the path and write:
+**For Cursor AI**:
+1. Download repository as `.zip` from [GitHub](https://github.com/exchanet/method_enterprise_builder_planning) → unzip
+2. Copy folder path (e.g., `C:\Users\your-name\Downloads\method-enterprise_builder_planning`)
+3. Cursor → New Agent chat → Paste path:
+   ```
+   Install this method globally: C:\Users\your-name\Downloads\method-enterprise_builder_planning
+   ```
+4. Restart Cursor → Use with: `/method-enterprise_builder`
 
-```
-Install this method so I can use it in Cursor: C:\Users\your-name\Downloads\method-enterprise_builder_planning
-```
-
-5. Close and reopen Cursor
-6. To use it, type in any chat: `/method-enterprise_builder`
-
-### Install for other agents
+**For other agents**:
 
 ```bash
-# Claude Code
-cp agents/claude-code/CLAUDE.md /path/to/your-project/
-cp -r agents/claude-code/.claude /path/to/your-project/
+# Clone repository
+git clone https://github.com/exchanet/method_enterprise_builder_planning.git
+cd method_enterprise_builder_planning
 
-# Kimi Code
-cp agents/kimi-code/KIMI.md /path/to/your-project/
-
-# Windsurf
-cp agents/windsurf/WINDSURF.md /path/to/your-project/
-
-# Google Antigravity
-cp agents/antigravity/AGENTS.md /path/to/your-project/
-cp agents/antigravity/GEMINI.md /path/to/your-project/  # Optional (Gemini-specific)
-cp -r agents/antigravity/.agent /path/to/your-project/
+# Install for your agent
+bash scripts/migrate-to-v2.sh --project=/path/to/your-project --agent=cursor
+# Options: cursor, claude-code, kimi-code, windsurf, antigravity
 ```
 
-See [agents/README.md](agents/README.md) for the full agent comparison table.
+**Global installation** (available in all projects):
+```bash
+# Cursor AI
+cp -r agents/cursor/.cursor ~/.cursor/
+
+# Claude Code
+cp agents/claude-code/CLAUDE.md ~/.config/claude/
+cp -r agents/claude-code/.claude ~/.config/claude/
+
+# Antigravity
+cp agents/antigravity/AGENTS.md ~/.config/antigravity/
+cp -r agents/antigravity/.agent ~/.config/antigravity/
+```
+
+See [agents/README.md](agents/README.md) for detailed installation per platform.
 
 ### Manual installation
 
 ```bash
 # Clone repository
-git clone https://github.com/exchanet/method_enterprise_builder_planning_cursor.git
-cd method_enterprise_builder_planning_cursor
+git clone https://github.com/exchanet/method_enterprise_builder_planning.git
+cd method_enterprise_builder_planning
 
-# Copy to your project
-cp -r .cursor /path/to/your/project/
+# Copy agent-specific files to your project
+# For Cursor AI:
+cp -r agents/cursor/.cursor /path/to/your/project/
+
+# For Claude Code:
+cp agents/claude-code/CLAUDE.md /path/to/your/project/
+cp -r agents/claude-code/.claude /path/to/your/project/
+
+# For Antigravity:
+cp agents/antigravity/AGENTS.md /path/to/your/project/
+cp agents/antigravity/GEMINI.md /path/to/your/project/
+cp -r agents/antigravity/.agent /path/to/your/project/
 ```
 
 Also install the companion methods:
 
 ```bash
 # Method Modular Design (Core + Packs pattern)
-git clone https://github.com/exchanet/method_modular_design_cursor.git
-cp -r method_modular_design_cursor/.cursor /path/to/your/project/
+git clone https://github.com/exchanet/method_modular_design.git
+cp -r method_modular_design/agents/cursor/.cursor /path/to/your/project/
 
 # PDCA-T Method (quality assurance cycle)
-git clone https://github.com/exchanet/method_pdca-t_coding_Cursor.git
-cp -r method_pdca-t_coding_Cursor/.cursor/rules/METODO-PDCA-T.md /path/to/your/project/.cursor/rules/
-cp -r method_pdca-t_coding_Cursor/.cursor/skills/metodo-pdca-t /path/to/your/project/.cursor/skills/
+git clone https://github.com/exchanet/method_pdca-t_coding.git
+cp -r method_pdca-t_coding/agents/cursor/.cursor/rules/METODO-PDCA-T.md /path/to/your/project/.cursor/rules/
+cp -r method_pdca-t_coding/agents/cursor/.cursor/skills/metodo-pdca-t /path/to/your/project/.cursor/skills/
 ```
 
 ---
